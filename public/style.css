@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  width: 90%;
+  max-width: 300px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.pagination-controls {
+  margin: 10px 0;
+}
+
+.pagination-controls input {
+  width: 60px;
+  text-align: center;
+}
+
+.main-content.desktop {
+  display: flex;
+  gap: 20px;
+}
+
+.main-content.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.table-section {
+  flex: 2;
+  max-height: 800px;
+  overflow: auto;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section th,
+.table-section td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+
+  
+}
+
+.table-section th:hover, .table-section td:hover {
+  cursor: pointer;
+}
+
+.table-section tr.selected {
+  background-color: #e6f7ff;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#previewImage {
+  position: sticky;
+  width: 100%;
+  max-height: 300px;
+  border: 1px solid #ccc;
+  object-fit: contain;
+}
+
+form label {
+  display: block;
+  margin-top: 5px;
+}
+
+form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Highlight focused input */
+input:focus {
+  outline: 2px solid #007BFF;
+}
