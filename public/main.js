@@ -25,7 +25,7 @@ async function init() {
     dbPath = localStorage.getItem(DB_PATH_KEY);
     dbTableName = localStorage.getItem(DB_TABLE_NAME_KEY);
 
-    currentPage = localStorage.getItem(PAGE_KEY);
+    currentPage = Number(localStorage.getItem(PAGE_KEY));
 
     document.querySelector("#datasetDir").value = datasetDir;
     document.querySelector("#dbPath").value = dbPath;
@@ -94,6 +94,7 @@ function renderTable() {
     currentPageData.forEach((row, i) => {
     const tr = document.createElement("tr");
     tr.onclick = () => {
+        currentRowIndex = i
         selectRow(row);
     };
     columns.forEach(col => {
@@ -163,6 +164,11 @@ function selectRow(row) {
 
     const firstInput = form.querySelector("input");
     if (firstInput) firstInput.focus();
+}
+
+async function onClickSetPage(event) {
+    currentPage = event.target.value == 'number' ? Number(event.target.value) : currentPage;
+    await loadData();
 }
 
 async function applyChanges() {

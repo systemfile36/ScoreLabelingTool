@@ -32,10 +32,16 @@
       <button onclick="loadData()">Load Data</button>
     </div>
 
-    <div class="pagination-controls">
-      <button onclick="prevPage()">&laquo; Prev</button>
-      <span id="pageInfo"></span>
-      <button onclick="nextPage()">Next &raquo;</button>
+    <div class="pagination-controls d-flex flex-row justify-content-between">
+      <div>
+        <button onclick="prevPage()">&laquo; Prev</button>
+        <span id="pageInfo"></span>
+        <button onclick="nextPage()">Next &raquo;</button>
+      </div>
+      <div>
+        <input type="text" placeholder="Page number">
+        <button onclick="onClickSetPage()">Set</button>
+      </div>
     </div>
 
     <div class="main-content">
