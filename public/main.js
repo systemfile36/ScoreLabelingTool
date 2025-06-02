@@ -166,8 +166,9 @@ function selectRow(row) {
     if (firstInput) firstInput.focus();
 }
 
-async function onClickSetPage(event) {
-    currentPage = event.target.value == 'number' ? Number(event.target.value) : currentPage;
+async function onClickSetPage() {
+    event = document.getElementById("tbPage");
+    currentPage = Number(event.value);
     await loadData();
 }
 
